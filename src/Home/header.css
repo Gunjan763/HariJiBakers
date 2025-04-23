@@ -1,0 +1,9 @@
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    padding: 10px;
+  }
+}

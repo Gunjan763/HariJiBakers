@@ -1,0 +1,1106 @@
+/* AboutUsEnhanced.css - More engaging styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'); /* Ensure FontAwesome is loaded */
+
+/* --- Variables --- */
+:root {
+  --primary-font: 'Poppins', sans-serif;
+  --heading-font: 'Playfair Display', serif;
+  --primary-color: #8B4513; /* Saddle Brown - Deeper Brown */
+  --secondary-color: #D2691E; /* Chocolate - Warmer Brown */
+  --accent-color: #FFD700; /* Gold - for highlights */
+  --light-bg: #FFF8F0; /* Very light creamy background */
+  --text-color: #4A4A4A; /* Dark Grey for text */
+  --light-text: #6c757d;
+  --border-color: #EAE0D5; /* Light taupe border */
+}
+
+/* --- General Page Styles --- */
+.about-us-page {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  background-color: #ffffff; /* White base for contrast */
+  line-height: 1.7;
+}
+
+.about-us-content-wrapper {
+  max-width: 960px;
+  margin: -80px auto 40px auto; /* Pull content up over banner */
+  padding: 40px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative; /* Needed for margin-top to work correctly */
+  z-index: 2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* --- Hero Banner --- */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 45vh; /* Adjust height as needed */
+  min-height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crucial: Ensures image covers the area */
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 20, 0, 0.55); /* Dark brown overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-title {
+  font-family: var(--heading-font);
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive font size */
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Section Styling --- */
+.about-section {
+  padding: 40px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.section-title {
+  font-family: var(--heading-font);
+  font-size: 2.8em;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.subsection-title {
+  font-family: var(--heading-font);
+  font-size: 2em;
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+  text-align: center; /* Center subsection titles */
+}
+
+/* Underline effect for subsection titles */
+.subsection-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin: 10px auto 0 auto; /* Center the underline */
+}
+
+.section-icon {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* --- Specific Section Styles --- */
+.welcome-section .welcome-text {
+  font-size: 1.15em;
+  color: var(--light-text);
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+.story-section p {
+  margin-bottom: 1.2em;
+}
+
+/* Inline Images (Example) */
+.inline-image {
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.small-image { max-width: 200px; margin-left: auto; margin-right: auto; }
+.medium-image { max-width: 350px; }
+.large-image { max-width: 100%; }
+.float-right { float: right; margin-left: 25px; } /* Add float utility if needed */
+/* Clear floats if using them: add <div style={{clear: 'both'}}></div> after paragraph */
+
+/* Philosophy List */
+.philosophy-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 650px;
+  margin: 0 auto; /* Center the list */
+}
+
+.philosophy-list li {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  margin-bottom: 20px;
+  font-size: 1.05em;
+}
+
+.philosophy-list .list-icon {
+  font-size: 1.4em;
+  color: var(--secondary-color);
+  margin-right: 15px;
+  margin-top: 4px; /* Align icon slightly better with text */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.philosophy-list strong {
+  color: var(--primary-color);
+  font-weight: 600;
+  display: block; /* Make strong tag take full width */
+  margin-bottom: 3px;
+}
+
+/* Offerings List */
+.offerings-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.offerings-list li {
+  background-color: var(--light-bg);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-weight: 400;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.offerings-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.offerings-list i {
+  display: block; /* Icon on its own line */
+  font-size: 1.8em;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+/* --- Reels Section Enhanced --- */
+.reels-section .instagram-follow {
+    margin-bottom: 30px;
+}
+
+.reels-section .instagram-link {
+    display: inline-block;
+    background-color: #E1306C; /* Instagram Pink */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.reels-section .instagram-link:hover {
+    background-color: #C13584; /* Darker Instagram Pink */
+}
+
+.reels-section .instagram-link i {
+    margin-right: 8px;
+}
+
+.reels-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Slightly larger items */
+  gap: 25px; /* More space */
+  margin-bottom: 20px;
+}
+
+.reel-item-enhanced {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.reel-item-enhanced:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.reel-thumbnail-wrapper {
+  position: relative; /* For positioning the play icon */
+  width: 100%;
+  padding-top: 100%; /* Creates a square aspect ratio */
+  overflow: hidden;
+}
+
+.reel-thumbnail-enhanced {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.reel-item-enhanced:hover .reel-thumbnail-enhanced {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.reel-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  font-size: 3em;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* Don't interfere with link */
+}
+
+.reel-item-enhanced:hover .reel-play-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.reel-description-enhanced {
+  padding: 12px 15px;
+  font-size: 0.95em;
+  text-align: center;
+  color: var(--text-color);
+  min-height: 3.5em; /* Ensure space */
+}
+
+.reel-embedding-note {
+  font-size: 0.9em;
+  color: var(--light-text);
+  margin-top: 20px;
+}
+
+/* --- Visit Us Section --- */
+.visit-us-section {
+  background-color: var(--light-bg);
+  margin: 40px -30px -40px -30px; /* Extend to edges of wrapper */
+  padding: 50px 30px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top: 1px solid var(--border-color);
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(210, 105, 30, 0.3);
+}
+
+.cta-button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(139, 69, 19, 0.4);
+}
+
+.cta-button i {
+  margin-left: 8px;
+}
+
+.thank-you-note {
+  font-style: italic;
+  color: var(--light-text);
+  margin-top: 25px;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .about-us-content-wrapper {
+    margin: -50px auto 30px auto;
+    padding: 30px 20px;
+    border-radius: 8px;
+  }
+
+  .hero-title {
+      font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .hero-subtitle {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .section-title { font-size: 2.2em; }
+  .subsection-title { font-size: 1.7em; }
+
+  /* If using float for images, consider removing float on smaller screens */
+  .float-right { float: none; margin: 15px auto 20px auto; display: block; }
+
+  .offerings-list {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+  }
+
+  .reels-grid-enhanced {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+   .about-us-content-wrapper {
+       margin: -30px 10px 20px 10px;
+       padding: 25px 15px;
+       border-radius: 5px;
+   }
+   .hero-banner {
+       height: 35vh;
+       min-height: 250px;
+   }
+
+   .section-title { font-size: 1.9em; }
+   .subsection-title { font-size: 1.5em; }
+
+   .philosophy-list li { font-size: 1em; }
+   .philosophy-list .list-icon { font-size: 1.2em; margin-right: 10px; }
+
+   .offerings-list {
+      grid-template-columns: 1fr 1fr; /* Force two columns */
+   }
+    .reels-grid-enhanced {
+      grid-template-columns: 1fr; /* Single column on very small screens */
+      gap: 20px;
+  }
+
+   .cta-button {
+       padding: 10px 20px;
+       font-size: 1em;
+   }
+}
+/* Main page background */
+.about-us-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f1faee; /* Light cream background */
+}
+
+.hero-banner {
+  position: relative;
+  background-color: #4e9e68; /* Pistachio green */
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.about-us-content-wrapper {
+  padding: 40px 20px;
+}
+
+/* Section styling */
+.about-section {
+  margin-bottom: 60px;
+}
+
+.section-title, .subsection-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #4e9e68; /* Pistachio Green */
+  text-transform: uppercase;
+}
+
+.welcome-section {
+  background-color: #f7f5f0; /* Light cream */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.about-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reels-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.reel-thumbnail-enhanced {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.reel-thumbnail-enhanced:hover {
+  transform: scale(1.05);
+}
+
+.reel-description-enhanced {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.instagram-link {
+  font-weight: bold;
+  color: #3f729b;
+  font-size: 20px;
+}
+.about-us-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.about-section {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+
+
+
+.instagram-follow {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.instagram-link {
+  color: #e4405f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.instagram-link:hover {
+  text-decoration: underline;
+}
+/* --- General Page Styles --- */
+.about-us-page {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  background-color: #D3E8D1; /* Soft pastel green pistachio */
+  line-height: 1.7;
+}
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-title {
+  font-family: var(--heading-font);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Section Styling --- */
+.about-section {
+  padding: 40px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #F1F8F3; /* Light pastel green background for sections */
+}
+
+.section-title {
+  font-family: var(--heading-font);
+  font-size: 2.8em;
+  color: #4e9e68; /* Pistachio Green */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.subsection-title {
+  font-family: var(--heading-font);
+  font-size: 2em;
+  color: #A8D5BA; /* Light pistachio green */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.subsection-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin: 10px auto 0 auto;
+}
+
+.offerings-list li {
+  background-color: #F7FAF5; /* Light cream background for offerings */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-weight: 400;
+}
+
+.cta-button {
+  background-color: #A8D5BA; /* Lighter pistachio green */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-top: 15px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #8cba9e; /* Slightly darker pistachio */
+  transform: translateY(-2px);
+}
+
+.reels-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 20px;
+  background-color: #F7F7F5; /* Soft pastel background for reels section */
+}
+
+.reel-item-enhanced:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+/* --- General Page Styles --- */
+.about-us-page {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  background-color: #D3E8D1; /* Soft pastel green pistachio */
+  line-height: 1.7;
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* --- Hero Banner --- */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  min-height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-color: #A8D5BA; /* Lighter pistachio green */
+  animation: slideIn 1s ease-out;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  animation: fadeInImage 1.5s ease-out;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-title {
+  font-family: var(--heading-font);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  animation: fadeInTitle 1.5s ease-out;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInSubtitle 1.8s ease-out;
+}
+
+/* --- Section Styling --- */
+.about-section {
+  padding: 40px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #F1F8F3; /* Light pastel green background for sections */
+  animation: fadeInSection 1.5s ease-out;
+}
+
+.section-title {
+  font-family: var(--heading-font);
+  font-size: 2.8em;
+  color: #4e9e68; /* Pistachio Green */
+  margin-bottom: 25px;
+  text-align: center;
+  animation: slideInTitle 1s ease-out;
+}
+
+.subsection-title {
+  font-family: var(--heading-font);
+  font-size: 2em;
+  color: #A8D5BA; /* Light pistachio green */
+  margin-bottom: 25px;
+  text-align: center;
+  animation: slideInTitle 1s ease-out;
+}
+
+.subsection-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin: 10px auto 0 auto;
+}
+
+.offerings-list li {
+  background-color: #F7FAF5; /* Light cream background for offerings */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-weight: 400;
+  opacity: 0;
+  animation: fadeInItem 2s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.cta-button {
+  background-color: #A8D5BA; /* Lighter pistachio green */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-top: 15px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  animation: fadeInButton 2s ease-out;
+}
+
+.cta-button:hover {
+  background-color: #8cba9e; /* Slightly darker pistachio */
+  transform: translateY(-2px);
+}
+
+.reels-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 20px;
+  background-color: #F7F7F5; /* Soft pastel background for reels section */
+  animation: fadeInGrid 2s ease-out;
+}
+
+.reel-item-enhanced:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Animations --- */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSubtitle {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSection {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInItem {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInGrid {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* --- Hero Image Animations --- */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  animation: fadeInImage 1.5s ease-out, zoomIn 2s ease-out;
+}
+
+/* --- General Image Animations --- */
+.about-section img,
+.reels-grid-enhanced img {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInImage 1.5s ease-out forwards, zoomIn 2s ease-out forwards;
+}
+
+.reels-grid-enhanced img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reels-grid-enhanced img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Animations --- */
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSubtitle {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSection {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInItem {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInGrid {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
