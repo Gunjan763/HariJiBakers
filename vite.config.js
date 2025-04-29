@@ -7,7 +7,7 @@ export default defineConfig({
     tailwindcss(),
   ],
   build: {
-    outDir: 'dist',  // Specify the build output directory
+    outDir: 'build',  // Specify the build output directory
     assetsDir: 'assets',  // Folder for static assets like images, fonts, etc.
     rollupOptions: {
       input: 'index.html', // Main entry file for the app
