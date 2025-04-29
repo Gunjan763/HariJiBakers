@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Container, Row, Col } from "react-bootstrap";
-import { name } from "./hero";
+import { name } from "./Hero";
 
 export default function Footer() {
   return (
