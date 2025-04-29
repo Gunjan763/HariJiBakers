@@ -91,7 +91,6 @@ header h2 {
   opacity: 0.8;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hamburger {
     display: block;

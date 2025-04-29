@@ -23,13 +23,12 @@ export default function Header() {
       }}
     >
       <Container fluid>
-        {/* Logo + Brand */}
         <Navbar.Brand as={Link} to="/" style={{ display: "flex", alignItems: "center", gap: "14px" }}>
           <img
             src="https://tse1.mm.bing.net/th?id=OIP.vevBbJHJcVuZWfZXOHB1cAHaHa&pid=Api&P=0&h=180"
             style={{
               height: "50px",
-              width: "50px",
+         
               borderRadius: "50%",
               boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)",
             }}
@@ -49,11 +48,7 @@ export default function Header() {
             Hari Ji Bakers
           </span>
         </Navbar.Brand>
-
-        {/* Toggle button positioned to right */}
         <Navbar.Toggle aria-controls="navbarScroll" className="ms-auto" />
-
-        {/* Nav links */}
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="ms-auto my-2 my-lg-0"
@@ -83,7 +78,6 @@ export default function Header() {
   );
 }
 
-// Nav link style
 const navStyle = {
   color: "#F5DEB3",
   fontSize: "18px",
@@ -96,7 +90,6 @@ const navStyle = {
   padding: "8px 16px",
 };
 
-// Icon style
 const iconStyle = {
   marginRight: "8px",
   color: "#FFD700",

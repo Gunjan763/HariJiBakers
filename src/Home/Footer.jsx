@@ -24,7 +24,7 @@ export default function Footer() {
             >
               Quick Links
             </h4>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2" style={{textAlign:"left",marginLeft:"-30px"}}>
               {["Home", "Services", "About", "Contact"].map((item) => (
                 <li key={item}>
                   <motion.a

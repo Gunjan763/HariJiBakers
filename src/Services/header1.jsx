@@ -67,7 +67,6 @@ export default function Header1() {
     </Navbar>
   );
 }
-
 const navStyle = {
   color: "#fffaf0",
   fontSize: "18px",
@@ -77,7 +76,6 @@ const navStyle = {
   alignItems: "center",
   transition: "color 0.3s ease",
 };
-
 const iconStyle = {
   marginRight: "8px",
   color: "#ffeaa7",
