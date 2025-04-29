@@ -12,12 +12,16 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:5000/contact', {
+    
+    // Send the formData object directly, no need to destructure
+    const response = await fetch('https://harijibakersserver-8848.onrender.com/contact', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData), // Use formData directly
     });
-
+  
     if (response.ok) {
       Swal.fire({
         title: 'Thank you! ❤️',
@@ -35,6 +39,7 @@ const Contact = () => {
       });
     }
   };
+  
 
   return (
     <div className="contact-container">
