@@ -1,73 +1,65 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaHome, FaConciergeBell, FaInfoCircle, FaPhoneAlt } from "react-icons/fa";
+import "./header1.css";
 
 export default function Header1() {
   return (
     <Navbar
       expand="lg"
-      variant="dark"
       style={{
         width: "100%",
-        backgroundColor: "rgba(10, 10, 10, 0.9)",
-        backdropFilter: "blur(6px)",
-        WebkitBackdropFilter: "blur(6px)",
-        boxShadow: "0 2px 15px rgba(0, 0, 0, 0.6)",
+        backgroundColor: "black",
+        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
         position: "sticky",
         top: 0,
         zIndex: 999,
-        padding: "10px 30px",
+        padding: "14px 30px",
+        backdropFilter: "blur(4px)",
+        WebkitBackdropFilter: "blur(4px)",
       }}
     >
       <Container fluid>
-        {/* Logo */}
-        <Navbar.Brand href="/" className="d-flex align-items-center">
-          <img
-            src="https://tse1.mm.bing.net/th?id=OIP.vevBbJHJcVuZWfZXOHB1cAHaHa&pid=Api&P=0&h=180"
-            alt="Hari Ji Bakers Logo"
-            style={{
-              height: "60px",
-              width: "60px",
-              borderRadius: "50%",
-              marginRight: "16px",
-              boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)",
-            }}
-          />
-          <span
-            style={{
-              fontFamily: "'Poetsen One', sans-serif",
-              fontWeight: "bold",
-              fontSize: "clamp(26px, 4vw, 38px)",
-              color: "whitesmoke",
-              textShadow: "3px 3px 6px rgba(0, 0, 0, 0.5)",
-              letterSpacing: "2px",
-            }}
-          >
-            Hari Ji Bakers
-          </span>
-        </Navbar.Brand>
+      <Navbar.Brand href="/" className="d-flex align-items-center">
+  <img
+    src="https://tse1.mm.bing.net/th?id=OIP.vevBbJHJcVuZWfZXOHB1cAHaHa&pid=Api&P=0&h=180"
+    alt="Hari Ji Bakers Logo"
+    className="logo-img"
+    style={{ height: "50px", marginRight: "10px" }}
+  />
+  <span
+    className="brand-name"
+    style={{
+      fontFamily: "'Great Vibes', cursive",
+      fontSize: "28px",
+      fontWeight: "bold",
+      background: "linear-gradient(90deg, #ffeaa7, #fab1a0)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      letterSpacing: "1px",
+      textShadow: "1px 1px 1px rgba(0,0,0,0.1)",
+    }}
+  >
+    Hari Ji Bakers
+  </span>
+</Navbar.Brand>
 
-        {/* Toggle Button for mobile */}
-        <Navbar.Toggle aria-controls="navbarScroll" />
 
-        {/* Collapsible Nav Links */}
+        <Navbar.Toggle aria-controls="navbarScroll" style={{ backgroundColor: "#ffeaa7" }} />
+
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="ms-auto"
-            style={{ gap: "20px", alignItems: "center" }}
-            navbarScroll
-          >
+          <Nav className="ms-auto my-2 my-lg-0" style={{ gap: "22px", alignItems: "center" }} navbarScroll>
             <Nav.Link href="/home" style={navStyle}>
-              <FaHome style={iconStyle} /> HOME
+              <FaHome style={iconStyle} /> Home
             </Nav.Link>
             <Nav.Link href="/services" style={navStyle}>
-              <FaConciergeBell style={iconStyle} /> SERVICES
+              <FaConciergeBell style={iconStyle} /> Services
             </Nav.Link>
             <Nav.Link href="/about" style={navStyle}>
-              <FaInfoCircle style={iconStyle} /> ABOUT US
+              <FaInfoCircle style={iconStyle} /> About Us
             </Nav.Link>
             <Nav.Link href="/contact" style={navStyle}>
-              <FaPhoneAlt style={iconStyle} /> CONTACT US
+              <FaPhoneAlt style={iconStyle} /> Contact
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -76,18 +68,18 @@ export default function Header1() {
   );
 }
 
-// Styles
 const navStyle = {
-  color: "#F5DEB3",
+  color: "#fffaf0",
   fontSize: "18px",
   fontWeight: "600",
-  fontFamily: "'Quicksand', sans-serif",
+  fontFamily: "'Poppins', sans-serif",
   display: "flex",
   alignItems: "center",
+  transition: "color 0.3s ease",
 };
 
 const iconStyle = {
   marginRight: "8px",
-  color: "#FFD700",
-  fontSize: "18px",
+  color: "#ffeaa7",
+  fontSize: "20px",
 };

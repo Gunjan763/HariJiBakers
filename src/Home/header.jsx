@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaHome, FaConciergeBell, FaInfoCircle, FaPhoneAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";  // Use Link instead of href
+import { Link } from "react-router-dom";
 import "./first.css";
 
 export default function Header() {
@@ -12,63 +12,56 @@ export default function Header() {
       style={{
         width: "100%",
         boxSizing: "border-box",
-        position: "relative",
+        position: "sticky",
+        top: 0,
+        zIndex: 999,
+        padding: "10px 30px",
+        backgroundColor: "rgba(10, 10, 10, 0.9)",
+        backdropFilter: "blur(6px)",
+        WebkitBackdropFilter: "blur(6px)",
+        boxShadow: "0 2px 15px rgba(0, 0, 0, 0.6)",
       }}
     >
-      <Container
-        fluid
-        style={{
-          width: "100%",
-          backgroundColor: "rgba(10, 10, 10, 0.9)",
-          backdropFilter: "blur(6px)",
-          WebkitBackdropFilter: "blur(6px)",
-          boxShadow: "0 2px 15px rgba(0, 0, 0, 0.6)",
-          position: "sticky",
-          top: 0,
-          zIndex: 999,
-          padding: "10px 30px",
-        }}
-      >
-        {/* Logo */}
-        <Navbar.Brand as={Link} to="/" style={{ display: "flex", alignItems: "center" }}>
+      <Container fluid>
+        {/* Logo + Brand */}
+        <Navbar.Brand as={Link} to="/" style={{ display: "flex", alignItems: "center", gap: "14px" }}>
           <img
             src="https://tse1.mm.bing.net/th?id=OIP.vevBbJHJcVuZWfZXOHB1cAHaHa&pid=Api&P=0&h=180"
             style={{
-              height: "70px",
-              width: "70px",
+              height: "50px",
+              width: "50px",
               borderRadius: "50%",
-              marginRight: "16px",
               boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)",
             }}
             alt="Hari Ji Bakers Logo"
           />
+          <span
+            style={{
+              fontFamily: "'Poetsen One', sans-serif",
+              fontWeight: "bold",
+              fontSize: "32px",
+              color: "whitesmoke",
+              textShadow: "3px 3px 6px rgba(0, 0, 0, 0.5)",
+              letterSpacing: "2px",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Hari Ji Bakers
+          </span>
         </Navbar.Brand>
 
-        {/* Brand Name */}
-        <Navbar.Brand
-          as={Link}
-          to="/"  // Use Link for navigation
-          style={{
-            fontFamily: "'Poetsen One', sans-serif",
-            fontWeight: "bold",
-            fontSize: "clamp(30px, 4.5vw, 42px)",
-            color: "whitesmoke",
-            textShadow: "3px 3px 6px rgba(0, 0, 0, 0.5)",
-            letterSpacing: "2px",
-            marginRight: "auto",
-          }}
-        >
-          Hari Ji Bakers
-        </Navbar.Brand>
+        {/* Toggle button positioned to right */}
+        <Navbar.Toggle aria-controls="navbarScroll" className="ms-auto" />
 
-        {/* Toggle Button for mobile */}
-        <Navbar.Toggle aria-controls="navbarScroll" />
-
-        {/* Collapsible Nav Links */}
+        {/* Nav links */}
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="ms-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px", gap: "20px" }}
+            style={{
+              gap: "20px",
+              alignItems: "center",
+              textAlign: "center",
+            }}
             navbarScroll
           >
             <Nav.Link as={Link} to="/" style={navStyle}>
@@ -90,7 +83,7 @@ export default function Header() {
   );
 }
 
-// Custom nav link style
+// Nav link style
 const navStyle = {
   color: "#F5DEB3",
   fontSize: "18px",
@@ -103,17 +96,9 @@ const navStyle = {
   padding: "8px 16px",
 };
 
+// Icon style
 const iconStyle = {
   marginRight: "8px",
   color: "#FFD700",
   fontSize: "18px",
 };
-
-@media (max-width: 991px) {
-  .navbar-nav {
-    text-align: center;
-  }
-  .navbar-nav .nav-link {
-    padding: 10px;
-  }
-}

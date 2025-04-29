@@ -13,39 +13,24 @@ export default function Footer() {
       style={{ fontFamily: "'Poppins', sans-serif" }}
     >
       <Container>
-        <Row className="mb-8 text-center text-md-left">
-          {/* Brand Info */}
-          <Col xs={12} md={4} className="mb-10 md:mb-0">
+        {/* Force all columns in single row */}
+        <Row className="flex items-start justify-between text-center md:text-left">
+          
+          {/* Quick Links */}
+          <Col xs={12} md={4} className="mb-8 md:mb-0 flex flex-col items-center md:items-start">
             <h4
               className="text-2xl md:text-3xl font-semibold mb-4"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              {name}
-            </h4>
-            <p className="mb-4 text-sm md:text-base">
-              Where passion meets pastries. Visit us for custom cakes,
-              delightful desserts, and cozy café vibes.
-            </p>
-            <p className="text-sm mt-2">
-              📍 Suratgharia Bazaar, Street Old Committee Wali, Sirsa, Haryana
-            </p>
-          </Col>
-
-          {/* Quick Links */}
-          <Col xs={12} md={4} className="mb-10 md:mb-0 flex flex-col items-center md:items-start">
-            <h4
-              className="text-2xl md:text-3xl font-semibold mb-4"
-              style={{ fontFamily: "'Playfair Display', serif", marginLeft:"100px" }}
-            >
               Quick Links
             </h4>
-            <ul className="list-none flex flex-col gap-2" style={{marginLeft:"100px"}}>
+            <ul className="flex flex-col gap-2">
               {["Home", "Services", "About", "Contact"].map((item) => (
-                <li key={item} >
+                <li key={item}>
                   <motion.a
                     href={`/${item.toLowerCase().replace(" ", "-")}`}
                     className="hover:underline text-[#6b8e23] text-lg"
-                    whileHover={{ scale: 1.1, color: "#4caf50" }}
+                    whileHover={{ scale: 1.05, color: "#4caf50" }}
                   >
                     {item}
                   </motion.a>
@@ -54,15 +39,32 @@ export default function Footer() {
             </ul>
           </Col>
 
-          {/* Social Media */}
-          <Col xs={12} md={4} className="text-center">
+          {/* Hari Ji Bakers */}
+          <Col xs={12} md={4} className="mb-8 md:mb-0 flex flex-col items-center">
             <h4
               className="text-2xl md:text-3xl font-semibold mb-4"
-              style={{ fontFamily: "'Playfair Display', serif"  }}
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              {name}
+            </h4>
+            <p className="text-sm md:text-base">
+              Where passion meets pastries. Visit us for custom cakes,
+              delightful desserts, and cozy café vibes.
+            </p>
+            <p className="text-sm mt-2">
+              📍 Suratgharia Bazaar, Street Old Committee Wali, Sirsa, Haryana
+            </p>
+          </Col>
+
+          {/* Follow Us */}
+          <Col xs={12} md={4} className="mb-8 md:mb-0 flex flex-col items-center md:items-end">
+            <h4
+              className="text-2xl md:text-3xl font-semibold mb-4"
+              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Follow Us
             </h4>
-            <div className="flex justify-center gap-6 mt-2">
+            <div className="flex gap-6 mt-2">
               <motion.a
                 href="https://www.facebook.com/harijibakers/"
                 target="_blank"
@@ -89,9 +91,10 @@ export default function Footer() {
               </motion.a>
             </div>
           </Col>
+
         </Row>
 
-        <hr className="border-t border-[#b3d9b3]" />
+        <hr className="border-t border-[#b3d9b3] mt-8" />
         <p className="text-center text-sm mt-4 text-[#6b8e23]">
           &copy; {new Date().getFullYear()} {name}. All rights reserved.
         </p>

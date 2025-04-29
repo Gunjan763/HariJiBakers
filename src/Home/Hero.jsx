@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FaHome,
   FaBirthdayCake,
@@ -20,18 +20,15 @@ function Hero() {
     textDecoration: "none",
     display: "flex",
     alignItems: "center",
-    gap: "12px",
+    gap: "10px",
     fontWeight: "500",
-    fontFamily: "inherit",
     fontSize: "20px",
     padding: "8px 12px",
     borderRadius: "8px",
     transition: "all 0.3s ease",
   };
 
-  const iconStyle = {
-    color: "#FFD700",
-  };
+  const iconStyle = { color: "#FFD700" };
 
   return (
     <div className="hero-container" style={{ margin: 0, padding: 0 }}>
@@ -54,8 +51,7 @@ function Hero() {
         <div
           className="absolute inset-0 z-0"
           style={{
-            background:
-              "linear-gradient(to bottom right, rgba(15, 23, 42, 0.6), rgba(0, 0, 0, 0.5))",
+            background: "linear-gradient(to bottom right, rgba(15, 23, 42, 0.6), rgba(0, 0, 0, 0.5))",
           }}
         />
 
@@ -68,110 +64,151 @@ function Hero() {
             left: 0,
             right: 0,
             color: "white",
+            zIndex: 50,
           }}
         >
+          {/* Logo */}
           <div className="flex items-center gap-3">
             <img
               src="https://tse1.mm.bing.net/th?id=OIP.vevBbJHJcVuZWfZXOHB1cAHaHa&pid=Api&P=0&h=180"
               alt="Logo"
               style={{
-                height: "80px",
-                width: "90px",
+                height: "70px",
+                width: "80px",
                 borderRadius: "50%",
               }}
             />
             <h2
               style={{
-                fontFamily: "'Poetsen One', sans-serif",
-                fontSize: "34px",
+                fontFamily: "'Great Vibes', cursive",
+                fontSize: "32px",
                 color: "#FFD700",
                 textShadow: "1px 1px 4px rgba(0,0,0,0.6)",
+                letterSpacing: "2px",
+                fontWeight: "700",
               }}
             >
-              {name}
+              Hari Ji Bakers
             </h2>
           </div>
 
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex gap-6">
+            <a href="/home" style={navLinkStyle}><FaHome style={iconStyle} /> HOME</a>
+            <a href="/services" style={navLinkStyle}><FaConciergeBell style={iconStyle} /> SERVICES</a>
+            <a href="/about" style={navLinkStyle}><FaInfoCircle style={iconStyle} /> ABOUT</a>
+            <a href="/contact" style={navLinkStyle}><FaEnvelope style={iconStyle} /> CONTACT</a>
+          </nav>
+
+          {/* Hamburger */}
           <button
-            className="hamburger sm:hidden"
+            className="block md:hidden text-white text-3xl"
             onClick={() => setMenuOpen(!menuOpen)}
             style={{
-              fontSize: "30px",
               background: "transparent",
               border: "none",
-              color: "#fff",
               cursor: "pointer",
+              zIndex: 60,
             }}
           >
             ☰
           </button>
-          <nav
-  className={`nav-links ${menuOpen ? "open" : ""} sm:flex hidden gap-6`}
-  style={{
-    alignItems: "center",
-  }}
->
-  <a href="/home" style={navLinkStyle}>
-    <FaHome style={iconStyle} /> HOME
-  </a>
-  <a href="/services" style={navLinkStyle}>
-    <FaConciergeBell style={iconStyle} /> SERVICES
-  </a>
-  <a href="/about" style={navLinkStyle}>
-    <FaInfoCircle style={iconStyle} /> ABOUT US
-  </a>
-  <a href="/contact" style={navLinkStyle}>
-    <FaEnvelope style={iconStyle} /> CONTACT US
-  </a>
-</nav>
-
         </header>
 
-        {/* Hero Text */}
+        {/* Mobile Nav (Animated) */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              className="fixed top-0 right-0 w-2/3 sm:w-1/3 h-full bg-[#0a0a23] flex flex-col items-start gap-8 p-8 z-40"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.4 }}
+            >
+              <button
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  alignSelf: "flex-end",
+                  background: "transparent",
+                  border: "none",
+                  fontSize: "30px",
+                  color: "#FFD700",
+                  cursor: "pointer",
+                }}
+              >
+                ✖
+              </button>
+
+              <a href="/home" style={navLinkStyle} onClick={() => setMenuOpen(false)}>
+                <FaHome style={iconStyle} /> HOME
+              </a>
+              <a href="/services" style={navLinkStyle} onClick={() => setMenuOpen(false)}>
+                <FaConciergeBell style={iconStyle} /> SERVICES
+              </a>
+              <a href="/about" style={navLinkStyle} onClick={() => setMenuOpen(false)}>
+                <FaInfoCircle style={iconStyle} /> ABOUT
+              </a>
+              <a href="/contact" style={navLinkStyle} onClick={() => setMenuOpen(false)}>
+                <FaEnvelope style={iconStyle} /> CONTACT
+              </a>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Hero Content */}
         <motion.div
           className="relative z-10 text-center w-full px-4 mt-10"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-wide mb-6"
-            style={{
-              color: "#a4510f",
-              textShadow:
-                "2px 2px 6px rgba(0, 0, 0, 0.6), 0 0 10px rgba(255, 215, 0, 0.4)",
-              fontFamily: "'Playfair Display', serif",
-              letterSpacing: "2px",
-              position: "relative",
-              display: "inline-block",
-              paddingBottom: "10px",
-              fontSize: "55px",
-              marginTop: "80px",
-            }}
-          >
-            Baked to Perfection
-            <span
-              style={{
-                position: "absolute",
-                bottom: "0",
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "60%",
-                height: "4px",
-                background: "linear-gradient(to right, #d9a060, #a4510f)",
-                borderRadius: "2px",
-                opacity: 0.8,
-              }}
-            />
-          </motion.h1>
+         
+         <motion.h1
+    className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-wide mb-4"
+    style={{
+      color: "#a4510f", // Your earlier brownish color
+      fontFamily: "'Playfair Display', serif",
+      fontSize: "50px",
+      marginTop: "60px",
+      position: "relative", // To position the underline
+      display: "inline-block", // Important for the underline
+      paddingBottom: "10px", // Space for the underline
+      marginTop:"-100px"
+    }}
+  >
+    Baked to Perfection
+    <motion.div
+      style={{
+        content: "''",
+        position: "absolute",
+        bottom: "-5px", // Adjusting to position just below the text
+        left: "50%",
+        transform: "translateX(-50%)", // Centering the line
+        height: "2px", // Line thickness
+        width: "40%", // Line width (percentage of the text)
+        backgroundColor: "#FFD700", // Matching the color of the text
+      }}
+      animate={{
+        width: "50%", // Gradually increase the width for effect
+      }}
+      transition={{
+        duration: 1.5, // Animation duration
+        type: "spring", // Smooth spring animation
+        stiffness: 120,
+        damping: 20,
+      }}
+    />
+  </motion.h1>
+
+
 
           <motion.p
             className="text-lg sm:text-xl md:text-2xl text-[#E3C099] mb-8 font-medium"
             style={{
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
               fontFamily: "cursive",
               fontSize: "30px",
               fontWeight: "600",
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
             }}
           >
             Where Every Bite is a Delight
@@ -189,9 +226,8 @@ function Hero() {
             style={{
               color: "#F5F5DC",
               fontFamily: "'Dancing Script', cursive",
-              textShadow: "1px 1px 4px rgba(0, 0, 0, 0.5)",
-              marginTop: "150px",
-              fontSize: "35px",
+              marginTop: "100px",
+              fontSize: "45px",
             }}
           >
             “Flavours of Tradition, Baked with Passion”
@@ -201,7 +237,6 @@ function Hero() {
               color: "#EAD6C2",
               fontFamily: "'Quicksand', sans-serif",
               fontWeight: "600",
-              textShadow: "1px 1px 4px rgba(0, 0, 0, 0.4)",
               fontSize: "25px",
             }}
           >

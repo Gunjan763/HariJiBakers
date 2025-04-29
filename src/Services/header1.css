@@ -1,0 +1,105 @@
+/* General Styles for Navbar */
+.navbar {
+  background-color: black; /* Soft rich pistachio green 🌿 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Light soft shadow */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 8px 20px; /* Reduced padding for better spacing */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Logo Styles */
+.navbar-brand img {
+  height: 50px; /* Adjust logo size */
+  width: 50px; /* Adjust logo size */
+  border-radius: 50%;
+  margin-right: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 5px rgba(123, 182, 97, 0.4);
+}
+
+/* Logo Text Styles */
+.navbar-brand span {
+  font-family: "'Great Vibes', cursive"; /* Stylish handwritten font! */
+  font-weight: 600;
+  font-size: clamp(28px, 5vw, 38px); /* Adjusted size for responsiveness */
+  color: #7bb661;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); /* Softer, richer shadow */
+  letter-spacing: 2px;
+}
+
+/* Smooth nav link hover underline */
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform for smooth hover */
+}
+
+/* Underline animation for nav links */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #4caf50; /* Underline color */
+  bottom: -4px;
+  left: 0;
+  transition: width 0.4s ease; /* Smooth transition for the underline */
+}
+
+/* On hover, expand the underline */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile view: center text */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center; /* Center-align navbar links */
+    gap: 12px; /* Adjust space between nav items */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+
+  .navbar-nav .nav-link::after {
+    bottom: -6px; /* Adjust underline position for smaller screens */
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-brand span {
+    font-size: 28px; /* Adjust the font size */
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #ff6347; /* Soft orange-red */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+}
+
+/* Tablet and small screens: tweak nav items spacing */
+@media (max-width: 768px) {
+  .navbar-nav {
+    gap: 10px; /* Further reduce gap on small screens */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px; 
+  }
+}
+
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    gap: 22px; 
+  }
+}
