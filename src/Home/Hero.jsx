@@ -169,7 +169,7 @@ function Hero() {
       color: "#a4510f", // Your earlier brownish color
       fontFamily: "'Playfair Display', serif",
       fontSize: "50px",
-      marginTop: "60px",
+   
       position: "relative", // To position the underline
       display: "inline-block", // Important for the underline
       paddingBottom: "10px", // Space for the underline

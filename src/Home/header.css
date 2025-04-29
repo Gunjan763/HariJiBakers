@@ -1,4 +1,4 @@
-/* Base styles for logo and text */
+/* Brand Logo Styling */
 .brand-logo {
   height: 50px;
   border-radius: 50%;
@@ -6,6 +6,7 @@
   transition: all 0.3s ease;
 }
 
+/* Brand Text Styling */
 .brand-text {
   font-family: 'Poetsen One', sans-serif;
   font-weight: bold;
@@ -17,7 +18,21 @@
   transition: all 0.3s ease;
 }
 
-/* Responsive scaling */
+/* Nav link default style */
+.navbar-nav .nav-link {
+  padding: 10px 16px;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive logo and text */
 @media (max-width: 768px) {
   .brand-logo {
     height: 40px;
@@ -25,6 +40,21 @@
 
   .brand-text {
     font-size: 20px;
+  }
+
+  .navbar-collapse {
+    padding-top: 20px;
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    padding: 10px 12px;
   }
 }
 
