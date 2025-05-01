@@ -25,7 +25,6 @@ app.post('/contact', async (req, res) => {
     subject: `New Message from ${name}`,
     text: `You received a message:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
   };
-
   try {
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: 'Message sent successfully' });
