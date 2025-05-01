@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 // Full pages
 import First from "./Home/first.jsx";
@@ -13,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<First />} />
         <Route path="/home" element={<First />} />
-        <Route path="/services"element={<Second />} />
+        <Route path="/services" element={<Second />} />
         <Route path="/about" element={<Third />} />
         <Route path="/contact" element={<Fourth />} />
       </Routes>
