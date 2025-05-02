@@ -1,34 +1,44 @@
-# Hari Ji Bakers 🍰🍞
+# 🍰 Hari Ji Bakers
 
 Welcome to **Hari Ji Bakers**! 🍪 A delightful bakery website where you can browse our scrumptious collection of cakes, pastries, and more. 🎂 We pride ourselves on using the freshest ingredients to bake everything to perfection. 🥐
 
 ---
 
+## 🔗 Live Demo
+
+> Explore the full site here:  
+**🌐 [hari-ji-bakers.onrender.com](https://hari-ji-bakers.onrender.com)**
+
+Deployed using **Render**, this live version brings the entire experience online—optimized for mobile, with fast performance and smooth navigation.
+
+---
+
 ## 🚀 Features
 
-- **Wide Range of Baked Goods** 🧁: Cakes, Pastries, Cookies, and more!
-- **Responsive Design** 📱: Beautiful and mobile-friendly UI.
-- **Smooth Animations** 🌟: Interactive and smooth page transitions.
-- **About Us Page** 🧑‍🍳: Learn more about our bakery’s journey.
-- **Contact Page** 📍: Get in touch with us or find our bakery’s location.
+- 🧁 **Wide Range of Baked Goods** – Cakes, pastries, cookies, and more!
+- 📱 **Responsive Design** – Clean, mobile-friendly layout.
+- 🌟 **Smooth Animations** – Soft page transitions and elegant motion.
+- 🧑‍🍳 **About Us Page** – Discover our bakery’s journey and passion.
+- 📍 **Contact Page** – Reach us easily and find our location.
+- 🔐 **Login System** – Secure login with backend verification.
 
 ---
 
 ## 🖼️ Screenshots
 
-Here are some screenshots of the website to give you a glimpse of what it looks like:
+Take a peek at the UI of Hari Ji Bakers:
 
-**🏠 Home Page**
+### 🏠 Home Page  
 ![Homepage](https://github.com/Gunjan763/HariJiBakers/blob/main/dist/assets/ss1.png?raw=true)
 
-**🍽️ Services Section**
-![Collection Page](https://github.com/Gunjan763/HariJiBakers/blob/main/dist/assets/ss2.png)
+### 🍽️ Services Section  
+![Services](https://github.com/Gunjan763/HariJiBakers/blob/main/dist/assets/ss2.png)
 
-**📖 About Us Page**
-![about page](https://github.com/Gunjan763/HariJiBakers/blob/main/dist/assets/ss3.png)
+### 📖 About Us Page  
+![About](https://github.com/Gunjan763/HariJiBakers/blob/main/dist/assets/ss3.png)
 
-**🔐 Login Page**
-![login]()
+### 🔐 Login Page  
+![Login](https://github.com/Gunjan763/HariJiBakers/blob/main/dist/assets/ss4.png)
 
 ---
 
