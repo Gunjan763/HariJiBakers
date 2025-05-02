@@ -17,9 +17,9 @@ Welcome to **Hari Ji Bakers**! 🍪 A delightful bakery website where you can br
 ## 🖼️ Screenshots
 
 Here are some screenshots of the website to give you a glimpse of what it looks like:
-
+1.🏠 Home Page
 ![Homepage](https://github.com/Gunjan763/HariJiBakers/blob/main/dist/assets/ss1.png?raw=true)
-
+2. 🍽️ Services Section
 ![Collection Page](./images/screenshot-collection.png)
 
 ---
