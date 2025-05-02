@@ -7,7 +7,7 @@ Welcome to **Hari Ji Bakers**! 🍪 A delightful bakery website where you can br
 ## 🔗 Live Demo
 
 > Explore the full site here:  
-**🌐 [hari-ji-bakers.onrender.com](https://hari-ji-bakers.onrender.com)**
+**🌐 [hari-ji-bakers.onrender.com](https://harijibakers2.onrender.com/)**
 
 Deployed using **Render**, this live version brings the entire experience online—optimized for mobile, with fast performance and smooth navigation.
 
