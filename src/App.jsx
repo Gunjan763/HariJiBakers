@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Full pages
 import First from "./Home/first.jsx";
 import Second from "./Services/second.jsx";
 import Third from "./about/third.jsx";
