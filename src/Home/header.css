@@ -32,29 +32,42 @@
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Responsive logo and text */
+/* Toggle Button Styling */
+.custom-toggler {
+  border: 2px solid #ccc;
+  padding: 6px 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000; /* Ensure it stays above other elements */
+  margin-right: 10px;
+}
+
+.custom-toggler:hover {
+  background-color: #e9ecef;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .brand-logo {
-    height: 40px;
-  }
-
-  .brand-text {
-    font-size: 20px;
-  }
-
   .navbar-collapse {
-    padding-top: 20px;
-  }
-
-  .navbar-nav {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 12px !important;
+    background-color: rgba(10, 10, 10, 0.95);
+    padding: 10px 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 999; /* Ensure it stays above other content */
   }
 
   .navbar-nav .nav-link {
-    font-size: 16px;
-    padding: 10px 12px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    border-bottom: 1px solid #444;
+  }
+
+  .custom-toggler {
+    margin-right: 10px;
   }
 }
 
@@ -65,5 +78,10 @@
 
   .brand-text {
     font-size: 18px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 8px 12px;
   }
 }

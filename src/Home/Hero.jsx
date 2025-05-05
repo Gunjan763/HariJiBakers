@@ -81,11 +81,13 @@ function Hero() {
             <h2
               style={{
                 fontFamily: "'Great Vibes', cursive",
-                fontSize: "32px",
-                color: "#FFD700",
-                textShadow: "1px 1px 4px rgba(0,0,0,0.6)",
-                letterSpacing: "2px",
-                fontWeight: "700",
+      fontSize: "28px",
+      fontWeight: "bold",
+      background: "linear-gradient(90deg, #ffeaa7, #fab1a0)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      letterSpacing: "1px",
+      textShadow: "1px 1px 1px rgba(0,0,0,0.1)",
               }}
             >
               Hari Ji Bakers

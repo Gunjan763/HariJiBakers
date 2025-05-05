@@ -15,7 +15,7 @@ export default function Header() {
         width: "100%",
         boxSizing: "border-box",
         zIndex: 999,
-        padding: "10px 30px",
+        padding: "10px 20px",
         backgroundColor: "rgba(10, 10, 10, 0.9)",
         backdropFilter: "blur(6px)",
         WebkitBackdropFilter: "blur(6px)",
@@ -39,8 +39,8 @@ export default function Header() {
 
         <Navbar.Toggle
           aria-controls="navbarScroll"
-          className="ms-auto"
-          style={{ borderColor: "#F5DEB3", zIndex: 1001 }}
+          className="ms-auto custom-toggler"
+          style={toggleButtonStyle}
         />
 
         <Navbar.Collapse id="navbarScroll">
@@ -93,4 +93,14 @@ const brandTextStyle = {
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   letterSpacing: "1px",
+};
+
+const toggleButtonStyle = {
+  border: "2px solid #ccc",
+  padding: "6px 10px",
+  backgroundColor: "#f8f9fa",
+  borderRadius: "6px",
+  boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+  transition: "all 0.3s ease",
+  cursor: "pointer",
 };
